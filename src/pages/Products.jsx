@@ -107,13 +107,13 @@ export default function Products() {
           </p>
         </div>
       ) : (
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-x-4 gap-y-8">
           {products.map((product) => (
             <article
               key={product._id || product.id}
               className="w-[calc(50%-8px)] overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md lg:w-[calc(25%-12px)]"
             >
-              <div className="flex h-56 items-center justify-center bg-slate-100">
+              <div className="flex h-40 items-center justify-center bg-slate-100">
                 {product.image ? (
                   <img
                     src={product.image}
@@ -128,8 +128,8 @@ export default function Products() {
                 )}
               </div>
 
-              <div className="space-y-3 p-5">
-                <h2 className="text-xl font-semibold text-slate-900">
+              <div className="space-y-2 p-3">
+                <h2 className="text-lg font-semibold text-slate-900">
                   {product.name}
                 </h2>
 
@@ -155,7 +155,7 @@ export default function Products() {
 
                 <Link
                   to={`/products/${product._id || product.id}`}
-                  className="block rounded-lg bg-slate-900 px-4 py-3 text-center font-medium text-white transition hover:bg-slate-700"
+                  className="block rounded-lg bg-slate-900 px-3 py-2 text-center text-sm font-medium text-white transition hover:bg-slate-700"
                 >
                   View Product
                 </Link>
