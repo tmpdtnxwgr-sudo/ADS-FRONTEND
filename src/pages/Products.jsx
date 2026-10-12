@@ -107,11 +107,11 @@ export default function Products() {
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-wrap gap-4">
           {products.map((product) => (
             <article
               key={product._id || product.id}
-              className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md"
+              className="w-[calc(50%-8px)] overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md lg:w-[calc(25%-12px)]"
             >
               <div className="flex h-56 items-center justify-center bg-slate-100">
                 {product.image ? (
